@@ -7,30 +7,30 @@ import    { CheckIcon }    from '../icons/Icon'
 export const ListItem = (props: StackProps) => {
     const { children, ...rest } = props;
     return (
-      <HStack as='li' spacing='20px' {...rest}>
+      <HStack as='li' spacing='20px' {...rest} alignItems = 'start'>
         <Icon as={CheckIcon} w='22px' h='22px' />
-        <Text>{children}</Text>
+        <Text textAlign = {['left','left','center']}>{children}</Text>
       </HStack>
     );
   };
 
 export default function Pricing(){
-   
-    return (
+  return (
+    <Box mx = '18'>
       <Box
         maxW="994px"
         margin="auto"
         mt="-256px"
         borderRadius="12px"
         overflow="hidden"
-        boxShadow='0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)'
-        textAlign = 'center'>
-        <Flex>
-          <Box bg="#F0EAFB" p="60px">
+        boxShadow="0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)"
+        textAlign="center">
+        <Flex direction={["column", "column", "row"]}>
+          <Box bg="#F0EAFB" p="45px">
             <Text fontWeight="800px" fontSize="24px">
               Premium PRO
             </Text>
-            <Heading fontWeight="800px" fontSize="60px" mt="16px">
+            <Heading fontWeight="800px" fontSize={['5xl','5xl','6xl']} mt="16px">
               $329
             </Heading>
             <Text fontWeight="500px" fontSize="18px" mt="8px">
@@ -54,7 +54,8 @@ export default function Pricing(){
           </Box>
         </Flex>
       </Box>
-    );
+    </Box>
+  );
 }
 
 

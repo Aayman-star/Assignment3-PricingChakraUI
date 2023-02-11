@@ -8,15 +8,15 @@ export default function Header(){
         <Box pb = '112px' as="section">
           <Box
             
-            bg="#6B46C1"
-            color="#F7FAFC"
+            bg="purple.600"
+            color="gray.50"
             pt="90px"
             pb="198px"
             px="32px">
-            <Heading fontWeight="800" fontSize="48px" textAlign="center">
+            <Heading fontWeight="extrabold" fontSize={['3xl','3xl','5xl']} textAlign={['left','left','center']}>
               Simple Pricing for your business.
             </Heading>
-            <Text fontWeight="500" fontSize="24px" textAlign="center">
+            <Text fontWeight="medium" fontSize={['lg','lg','2xl']} textAlign={['left','left','center']}>
               Plans that are carefully crafted to suit your business.
             </Text>
           </Box>
